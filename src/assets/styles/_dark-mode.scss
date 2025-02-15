@@ -1,0 +1,103 @@
+.dark-mode {
+        background-color: #121212 !important;
+
+        .navbar {
+                background-color: #1e1e1e !important;
+
+                .link {
+                        color: #EAEAEA !important;
+                }
+
+        }
+        .category p{
+                color: #EAEAEA !important;
+        }
+        .dropdown-menu{
+                background-color: #1e1e1e !important;
+        }
+        .dropdown-menu a,.options .svg-inline--fa{
+                color: #38A6B0 !important;
+        }
+        .input-group-text {
+                color: #EAEAEA !important;
+        }
+
+        .navbar-brand,
+        h3,
+        .active-link,
+        .icons .svg-inline--fa,
+        
+        h4,
+        h1,h2,.dropdown-item {
+                color: #38A6B0 !important;
+        }
+
+        .dropdown-item{
+                &:hover{
+                        background-color: #121212 !important;;
+                }
+        }
+
+        .social-media{
+                .svg-inline--fa{
+                    background-color: #E27B47;            
+                    &:hover{
+                      
+                        background-color: $white-color;
+                        color: #E27B47;
+                    }
+                }
+            }
+            .profile-contact .svg-inline--fa{
+                color: #E27B47 !important;
+            }
+
+        input::placeholder,
+        textarea::placeholder,
+        span,
+        p,
+        h5,
+            li a,
+        .card-subtitle,
+        .form-label,.modal-title {
+                color: #6E6E6E !important;
+        }
+
+        a {
+                color: #6E6E6E;
+
+                &:active {
+                        color: #b05838 !important;
+                }
+        }
+
+        .footer {
+
+                background-color: #1e1e1e !important;
+                color: #EAEAEA !important;
+        }
+
+        .custom-btn {
+                color: #F8F9FA !important;
+                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6) !important;
+
+                &:hover {
+                        //background-color: #eef1f7; 
+                        box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.6) !important;
+                        transform: translateY(-2px) !important;
+                        transition: all 0.3s ease-in-out;
+                }
+        }
+
+        .card,
+        .swiper-content,
+        .form-control {
+                background-color: transparent !important;
+                color: #EAEAEA !important;
+        }
+
+        .modal-content {
+                background-image: linear-gradient(to top, #1e1e1e 0%, #1e1e1e 52%, #121212 100%);
+
+        }
+}

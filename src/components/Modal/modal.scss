@@ -1,0 +1,18 @@
+@import '../../assets/styles/variables';
+.modal{
+    z-index: 9000 !important;
+    .modal-dialog{
+        max-width: 350px !important;
+    }
+    
+    .modal-content{
+        border: none !important;
+        border-radius: 25px !important;
+
+        box-shadow: 4.0px 8.0px 8.0px hsla(0, 0%, 0%, 0.38);
+        background-image: linear-gradient(to top, $white-color 0%, $white-color 52%, rgb(215, 210, 210) 100%);
+            .modal-header{
+            border-bottom: none;
+        }
+    }
+}

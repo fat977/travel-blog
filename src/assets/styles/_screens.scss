@@ -1,0 +1,11 @@
+@media (max-width:'992px') {
+
+    .about-header,
+    .contact-header,
+    .blog-header,
+    .destination-header,
+    .dest-details-header img,
+    .post-details .post-header img {
+        height: 40vh !important;
+    }
+}

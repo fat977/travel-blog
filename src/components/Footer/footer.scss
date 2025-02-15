@@ -1,0 +1,41 @@
+@import '../../assets/styles/variables';
+.footer{
+    background-color: $primary-color !important;
+    
+        h3,p,.nav-link{
+            color: $white-color;
+        }
+    
+    ul li a{
+        position: relative;
+    }
+    ul{
+        list-style-type: none;
+        li{
+            margin: 1.2rem 0;
+            .nav-link{
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: -3px;
+                    height: 2px;
+                    width: 60%;
+                    left: 0;
+                    background-color: $secondary-color;
+                    transform-origin: center;
+                    transform: scaleX(0);
+                    transition: transform 650ms;
+                }
+        
+                &:hover::before {
+                    transform: scaleX(1);
+                }
+            }
+        }
+    };
+
+    .input-group-text {
+        background-color: $secondary-color;
+        color: $white-color;
+    }
+}

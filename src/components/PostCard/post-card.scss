@@ -1,0 +1,9 @@
+.card{
+    background-color: transparent;
+    border-radius: 0 !important;
+    border: none !important;
+    .card-img-top{
+        border-radius: 10px !important;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    }
+}

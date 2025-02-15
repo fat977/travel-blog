@@ -1,0 +1,219 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #F8F9FA !important;
+}
+
+//////// scrollbar ///////////
+/* Scrollbar track */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+/* Scrollbar handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+/* Hover effect for the scrollbar handle */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+////////////// end scrollbar ///////
+
+h1,
+h3,h2,.card-title,h4 {
+    font-family: $primary-font;
+    color: $primary-color !important;
+}
+
+a {
+    text-decoration: none !important;
+    font-family: $primary-font;
+}
+
+p,
+li,
+.input-group-text,
+input::placeholder,
+span,
+textarea::placeholder {
+    font-family: $secondary-font;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-size: 0.8rem !important;
+
+}
+
+label {
+    font-family: $primary-font;
+    font-size: 1.1rem;
+}
+
+.svg-inline--fa {
+    cursor: pointer;
+}
+
+//////// form /////
+form .form-control {
+    border-radius: 20px !important;
+}
+
+.form-control {
+    border-radius: 0 !important;
+    //border: none !important;
+    background-color: #eef1f7 !important;
+    padding: 0.8rem !important;
+    border: 1px solid #eef1f7 !important;
+}
+
+.input-group-text {
+    border-radius: 0 !important;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+    //border: none !important;
+}
+
+.register-p,
+.login-p {
+    cursor: pointer;
+    color: $primary-color;
+    font-weight: bold;
+}
+ /////////////// end form
+
+
+.custom-btn {
+    border: none !important;
+    border-radius: 50px !important;
+    padding: 12px 24px !important;
+    font-weight: 500 !important;
+    box-shadow: 0px 8px 15px $primary-color !important;
+    background-color: $primary-color;
+    color: $white-color;
+    font-family: $primary-font !important;
+
+    // Hover effect
+    &:hover {
+        //background-color: #eef1f7; 
+        box-shadow: 0px 12px 20px $primary-color;
+        transform: translateY(-2px) !important;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.hr-lines {
+    position: relative;
+    max-width: 500px;
+    text-align: center;
+
+    &::before {
+        @include line-style(left);
+    }
+
+    &::after {
+        @include line-style(right);
+    }
+}
+
+.custom-border {
+    position: relative;
+    max-width: 250px;
+
+    &::before {
+        @include border-style();
+    }
+
+    &::after {
+        @include border-style();
+    }
+}
+
+////////header text/////////////////
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: $primary-font;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+
+    p {
+        color: white;
+    }
+}
+
+////////header text details /////////////////
+.header-text-details {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    font-family: $primary-font;
+    text-shadow: 1px 6px 5px rgba(5, 5, 5, 1);
+    color: rgb(191, 174, 174);
+    z-index: 2;
+}
+
+///////// details pages ///////////
+.post-details,
+.destination-details {
+
+    .post-header,
+    .dest-details-header {
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 70vh;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), #121212);
+            pointer-events: none;
+            z-index: 1;
+            //filter: blur(-10px);
+        }
+    }
+
+    .post-body,
+    .destination-body {
+
+        .post-writer,
+        .destination-writer {
+            position: sticky;
+            top: 100px;
+
+            z-index: 1000;
+
+            img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+            }
+        }
+    }
+}

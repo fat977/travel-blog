@@ -1,0 +1,19 @@
+@import '../../assets/styles/variables';
+.social-media{
+    .svg-inline--fa{
+        background-color: $secondary-color;
+        color: $white-color;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        padding: 0.5rem;
+        box-shadow: 2.0px 4.0px 7.0px hsla(0, 0%, 0%, 0.38);
+
+        &:hover{
+            transition: all 0.3s ease-in-out;
+            transform: scale(1.5);
+            background-color: $white-color;
+            color: $secondary-color;
+        }
+    }
+}

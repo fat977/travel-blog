@@ -1,0 +1,131 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+
+.profile {
+  .header {
+    position: relative;
+    height: 350px;
+
+    .image-container {
+      position: relative;
+      display: inline-block;
+
+      .profile-image {
+
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        position: absolute;
+        display: block;
+        //top: 5%;
+        //right: 2%;
+      }
+
+      .half-circle-container {
+        position: absolute;
+        width: 400px;
+        height: 140px;
+        overflow: hidden;
+        top: 50%; // Center relative to the image
+        left: 50%;
+        transform: translate(15%, -50%) rotate(90deg); // Align and rotate
+
+        .half-border-circle {
+          width: 350px;
+          height: 350px;
+          border: 5px solid $secondary-color;
+          border-bottom: none;
+          border-radius: 50%;
+
+          .icon {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: $secondary-color;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            transform-origin: 50% 100%;
+            font-size: 1.3rem;
+
+            &:nth-child(1) {
+              transform: rotate(3deg) translate(10px, 40px) rotate(1800deg);
+
+              .svg-inline--fa {
+                transform: rotate(250deg);
+              }
+            }
+
+            &:nth-child(2) {
+              transform: rotate(60deg) translate(10px, -30px) rotate(1800deg);
+
+              .svg-inline--fa {
+                transform: rotate(40deg);
+              }
+            }
+
+            &:nth-child(3) {
+              transform: rotate(95deg) translate(-58px, -200px) rotate(50deg);
+
+              .svg-inline--fa {
+                transform: rotate(140deg);
+              }
+            }
+
+            &:nth-child(4) {
+              transform: rotate(90deg) translate(-10px, -255px) rotate(50deg);
+
+              .svg-inline--fa {
+                transform: rotate(140deg);
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  .profile-contact {
+    .svg-inline--fa {
+      @include icon-style(1.2rem, $secondary-color);
+    }
+  }
+
+  .posts {
+    .svg-inline--fa {
+      @include icon-style(1.5rem, $secondary-color);
+    }
+
+    .card .svg-inline--fa {
+      @include icon-style(1rem, #6E6E6E);
+    }
+
+    .options {
+      right: 2%;
+
+      .svg-inline--fa {
+        @include icon-style(1rem, $primary-color);
+      }
+
+      .dropdown {
+        .dropdown-toggle {
+          background-color: rgba(255, 255, 255, 0.7) !important;
+          border: none !important;
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+
+          &::after {
+            display: none !important;
+          }
+        }
+
+      }
+    }
+  }
+}
+

@@ -1,0 +1,52 @@
+@import '../../assets/styles/variables';
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 20px 0;
+
+    .page-item {
+        margin: 0 5px;
+
+        .page-link {
+            color: $primary-color ;
+            padding: 10px 15px;
+            text-decoration: none;
+            border: 1px solid $white-color;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+
+            &:hover {
+                background-color: $secondary-color !important;
+                color: $white-color !important;
+            }
+
+            &:focus {
+                box-shadow: none !important;
+            }
+        }
+    }
+}
+
+/* Active page styling */
+.active .page-link {
+    background-color: $secondary-color !important;
+    color: $white-color !important;
+    border-color: $secondary-color !important;
+}
+
+/* Style for "Previous" and "Next" buttons */
+.page-item:first-child .page-link,
+.page-item:last-child .page-link {
+    font-weight: bold;
+}
+
+/* Disabled state for "Previous" and "Next" */
+.page-item.disabled .page-link {
+    color: $text-color;
+    pointer-events: none;
+    background-color: $white-color;
+}

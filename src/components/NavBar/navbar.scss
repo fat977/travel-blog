@@ -1,0 +1,93 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+.navbar {
+    position: sticky !important;
+    top:0 !important;
+    z-index: 7000 !important;
+    .navbar-brand {
+        font-family: $primary-font;
+        font-size: 1.5rem;
+        color: $primary-color;
+    }
+
+    .navbar-toggler {
+        &:focus {
+            box-shadow: 5px 5px 0 $primary-color !important;
+            border: none !important;
+        }
+
+        &.collapsed {
+            border: none !important;
+        }
+    }
+
+    .navbar-collapse {
+        .navbar-nav {
+            a {
+                text-decoration: none;
+                color: $text-color;
+                font-family: $primary-font;
+                font-size: 1.2rem;
+
+                &:hover {
+                    color: $primary-color !important;
+                }
+            }
+
+            .active-link {
+                color: $primary-color;
+                border-bottom: 4px solid $primary-color;
+                border-radius: 10%;
+            }
+        }
+    }
+
+    .icons {
+        a,.dropdown-toggle {
+            color: $primary-color;
+            .svg-inline--fa{
+                @include icon-style;
+            }  
+        }
+
+        .dropdown {
+            a{
+                .svg-inline--fa{
+                    @include icon-style(1rem);
+                }
+                &:active{
+                    background-color: transparent !important;
+                    color: $primary-color;
+                }
+            }
+            .dropdown-toggle {
+                background-color: transparent !important;
+                color: $primary-color !important;
+                border: none !important;
+                padding: 0 !important;
+
+                &::after {
+                    display: none !important;
+                }
+            }
+
+            .dropdown-menu[data-bs-popper] {
+                left: -150px !important;
+            }
+        }
+        .dropdown-item.active{
+            background-color: transparent !important;
+        }
+
+    }
+}
+
+@media (max-width:'992px') {
+    .navbar-brand {
+        width: 40%;
+        img {
+            width: 15%;
+            height: 15%;
+        }
+    }
+}

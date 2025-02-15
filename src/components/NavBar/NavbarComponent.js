@@ -1,0 +1,22 @@
+export const links = [
+    {
+        path:'/',
+        name:'Home'
+    },
+    {
+        path:'/blog',
+        name:'Blog'
+    },
+    {
+        path:'/destinations',
+        name:'Destinations'
+    },
+    {
+        path:'/about',
+        name:'About'
+    },
+    {
+        path:'/contact',
+        name:'Contact'
+    },
+]

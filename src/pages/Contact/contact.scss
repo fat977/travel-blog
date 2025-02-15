@@ -1,0 +1,18 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+.contact{
+    .contact-header{
+        @include header-image('../../assets/images/contact/contact-background.jpg', 60% 10%)
+    }
+
+    .contact-details{
+        .svg-inline--fa{
+            background-color: $secondary-color;
+            padding: 0.7rem;
+            width: 25px;
+            height: 25px;
+            color: white;
+            border-radius: 50%;
+        }
+    }
+}

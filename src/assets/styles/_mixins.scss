@@ -1,0 +1,35 @@
+@mixin icon-style($size: 1.4rem, $color: $primary-color) {
+    font-size: $size;
+    color: $color; // For SVG icons
+}
+
+@mixin line-style($side) {
+    content: " ";
+    height: 2px;
+    width: 110px;
+    background: $secondary-color;
+    display: block;
+    position: absolute;
+    top: 50%;
+    #{$side}: 0;
+}
+
+@mixin border-style() {
+    content: " ";
+    height: 4px;
+    width: 20%;
+    background: $secondary-color;
+    display: block;
+    position: absolute;
+    top: 120%;
+}
+
+@mixin header-image($url, $position) {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(#{$url});
+    background-position: $position;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    height: 70vh;
+}

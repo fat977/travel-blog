@@ -1,0 +1,25 @@
+.settings{
+
+    .avatar {
+        .form-control{
+            display: none;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .icon {
+            bottom: 2%;
+            right: -10%;
+            //background-color: $dark-gray;
+            padding: 2px 5px;
+            border-radius: 50%;
+            cursor: pointer;
+            //border: 3px solid $dark-gray;
+            //color: $light-gray;
+        }
+    }
+}
