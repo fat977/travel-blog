@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/travel-blog/static/css/main.882f597e.css",
+    "main.js": "/travel-blog/static/js/main.e478e1fa.js",
+    "static/media/Hiking.jpg": "/travel-blog/static/media/Hiking.caca359b84a64ecda452.jpg",
+    "static/media/about-header.jpg": "/travel-blog/static/media/about-header.6827d45e91b84d2adc4a.jpg",
+    "static/media/error-img.png": "/travel-blog/static/media/error-img.c69946d7af125916367a.png",
+    "static/media/Japan.jpg": "/travel-blog/static/media/Japan.93b466c3187767027a39.jpg",
+    "static/media/rome.jpg": "/travel-blog/static/media/rome.9fdf0296641cddf36d19.jpg",
+    "static/media/molly-testimonial-girl.png": "/travel-blog/static/media/molly-testimonial-girl.0486c5173db95f4b405e.png",
+    "static/media/man-2.jpg": "/travel-blog/static/media/man-2.04eeb6fd7df28b185291.jpg",
+    "static/media/woman-1.jpg": "/travel-blog/static/media/woman-1.52b14e50630c0d580972.jpg",
+    "static/media/man-1.jpg": "/travel-blog/static/media/man-1.61d4e228de2ff9a65bfa.jpg",
+    "static/media/about-body.jpg": "/travel-blog/static/media/about-body.113c042930d5e16fdef9.jpg",
+    "static/media/contact-background.jpg": "/travel-blog/static/media/contact-background.56aadc64e82ccc9ad750.jpg",
+    "static/media/Sand.webp": "/travel-blog/static/media/Sand.092e7184a765de816aea.webp",
+    "static/media/top-travel-destinations.jpg": "/travel-blog/static/media/top-travel-destinations.bb74472751dbfa1f1d3e.jpg",
+    "static/media/wood.jpg": "/travel-blog/static/media/wood.9bf06259e47db5ff5bb9.jpg",
+    "static/media/Testimonial-3.png": "/travel-blog/static/media/Testimonial-3.4de7c809321c5840323b.png",
+    "static/media/volcano.jpg": "/travel-blog/static/media/volcano.20b4bed66ca51028e078.jpg",
+    "static/media/woman-2.jpg": "/travel-blog/static/media/woman-2.fea814ffbea2cddd85f7.jpg",
+    "static/media/contact-body.jpg": "/travel-blog/static/media/contact-body.13b798d6ec4d62e3e4d2.jpg",
+    "static/media/beach.jpg": "/travel-blog/static/media/beach.08a8430fd0e5e70bf2cf.jpg",
+    "static/media/Testimonials-man.png": "/travel-blog/static/media/Testimonials-man.7645fc2f60fe17493461.png",
+    "static/media/waterfall.jpg": "/travel-blog/static/media/waterfall.facb3d9fe5ba6d6115f1.jpg",
+    "static/media/historical.jpeg": "/travel-blog/static/media/historical.0f6897ae564fc9cbd8c5.jpeg",
+    "static/media/default-user.jpg": "/travel-blog/static/media/default-user.52e977328be646705bea.jpg",
+    "static/media/profile.jpg": "/travel-blog/static/media/profile.5405ce71516dfc118979.jpg",
+    "static/media/travel-bag.png": "/travel-blog/static/media/travel-bag.7898334df802a0a84a29.png",
+    "static/media/avatar.png": "/travel-blog/static/media/avatar.2c71bde8cde389099860.png",
+    "index.html": "/travel-blog/index.html",
+    "main.882f597e.css.map": "/travel-blog/static/css/main.882f597e.css.map",
+    "main.e478e1fa.js.map": "/travel-blog/static/js/main.e478e1fa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.882f597e.css",
+    "static/js/main.e478e1fa.js"
+  ]
+}
