@@ -12,8 +12,6 @@ import Error from "./pages/Error/Error";
 import Home from "./pages/Home/Home";
 import HomeIndex from "./pages/HomeIndex/HomeIndex";
 import Profile from "./pages/profile/Profile";
-import TestimonialCard from "./test";
-
 export const routes = [
   {
     path: "/",
@@ -52,11 +50,6 @@ export const routes = [
         element: <PrivateRoute element={<Profile />} />,  
       },
     ],
-  },
- 
-  {
-    path: "test",
-    element: <TestimonialCard />,
   },
   { path: '*', element: <Error /> },  // Catch-all for 404 page
 ];
