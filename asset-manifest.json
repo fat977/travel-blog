@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/travel-blog/static/css/main.daae5972.css",
+    "main.css": "/travel-blog/static/css/main.4d501632.css",
     "main.js": "/travel-blog/static/js/main.12c1ce5a.js",
     "static/media/Hiking.jpg": "/travel-blog/static/media/Hiking.caca359b84a64ecda452.jpg",
     "static/media/about-body.png": "/travel-blog/static/media/about-body.f692aecffc6add603b2e.png",
@@ -29,11 +29,11 @@
     "static/media/travel-bag.png": "/travel-blog/static/media/travel-bag.7898334df802a0a84a29.png",
     "static/media/avatar.png": "/travel-blog/static/media/avatar.2c71bde8cde389099860.png",
     "index.html": "/travel-blog/index.html",
-    "main.daae5972.css.map": "/travel-blog/static/css/main.daae5972.css.map",
+    "main.4d501632.css.map": "/travel-blog/static/css/main.4d501632.css.map",
     "main.12c1ce5a.js.map": "/travel-blog/static/js/main.12c1ce5a.js.map"
   },
   "entrypoints": [
-    "static/css/main.daae5972.css",
+    "static/css/main.4d501632.css",
     "static/js/main.12c1ce5a.js"
   ]
 }
