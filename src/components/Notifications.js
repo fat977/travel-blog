@@ -3,7 +3,7 @@ import "react-toastify/dist/ReactToastify.css";
 const Notifications = () => {
   return (
     <div className="">
-      <ToastContainer position="bottom-right" />
+      <ToastContainer position="top-right" />
     </div>
   );
 };

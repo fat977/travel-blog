@@ -12,7 +12,7 @@ import "./about.scss";
 import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import { team } from "./data/Team";
 import SocialMediaComponent from "../../components/SocialMedia/SocialMediaComponent";
-import bodyImage from "../../assets/images/about/about-body.jpg";
+import bodyImage from "../../assets/images/about/about-body.png";
 import { testimonials } from "./data/testimonials";
 const About = () => {
   return (
@@ -48,7 +48,7 @@ const About = () => {
         </Row>
       </div>
       <div className="team container my-5">
-        <h3 className="hr-lines mx-auto my-5">Team</h3>
+        <h3 className="hr-lines my-5">Team</h3>
         <Row>
           {team.map((person, index) => (
             <Col lg="3" md="6" xs="12" className="my-5 my-lg-0" key={index}>
@@ -71,7 +71,7 @@ const About = () => {
         className="testimonials container my-5 p-4"
         style={{ margin: "0 auto" }}
       >
-        <h3 className="hr-lines mx-auto my-5">Testimonials</h3>
+        <h3 className="hr-lines  my-5">Testimonials</h3>
        
           <Swiper
             spaceBetween={50} // Space between slides

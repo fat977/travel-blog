@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Form, Spinner } from "react-bootstrap";
+import { Form, Spinner } from "react-bootstrap";
 import SocialMediaComponent from "../components/SocialMedia/SocialMediaComponent";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { toast } from "react-toastify";
@@ -82,7 +82,7 @@ const Login = ({ onSubmit, toggleViews }) => {
               placeholder="Email"
               value={userData.email}
               onChange={handleInputChange}
-              className={`${errors.email ? "border-danger" : "border-success"}`}
+              className={`${errors.email && "border-danger"}`}
               required
             />
             {errors.email && (
@@ -96,13 +96,13 @@ const Login = ({ onSubmit, toggleViews }) => {
               placeholder="Password"
               value={userData.password}
               onChange={handleInputChange}
-              className={`${errors.password ? "border-danger" : "border-success"}`}
+              className={`${errors.password && "border-danger"}`}
             />
             {errors.password && (
                <Form.Text className="text-danger">{errors.password}</Form.Text>
             )}
           </Form.Group>
-          <Button type="submit" className="custom-btn d-block w-100 mx-auto" disabled={isDisabled}>
+          <button type="submit" className="custom-btn d-block w-100 mx-auto" disabled={isDisabled}>
             {loading ? (
               <>
                 <Spinner size="sm" animation="border" />
@@ -111,7 +111,7 @@ const Login = ({ onSubmit, toggleViews }) => {
             ) : (
               "Sign in"
             )}
-          </Button>
+          </button>
           <div className="d-flex gap-3 align-items-center mt-4">
             <p className="text-muted">Don't have an account ?</p>
             <p className="register-p" onClick={toggleViews}>

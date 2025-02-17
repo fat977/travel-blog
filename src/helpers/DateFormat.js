@@ -16,10 +16,20 @@ const relativeDate = formatDistanceToNow(date, { addSuffix: true });
 console.log(relativeDate); // "2 days ago" */
 export const formatDate = (date, dateFormat = 'EEEE, MMMM d, yyyy, h:mm a') => {
   try {
-    const parsedDate = typeof date === 'string' || typeof date === 'number' ? new Date(date) : date.toDate().toLocaleString();
+    // Handle the date string or object
+    const parsedDate =
+      typeof date === 'string' || typeof date === 'number'
+        ? new Date(date)
+        : date;
+
+    // Check for an invalid date
+    if (!parsedDate || isNaN(parsedDate.getTime())) {
+      throw new Error('Invalid date');
+    }
+
     return format(parsedDate, dateFormat);
   } catch (error) {
-    console.error('Error formatting date:', error);
+    console.error('Error formatting date:', error.message);
     return 'Invalid date';
   }
 };

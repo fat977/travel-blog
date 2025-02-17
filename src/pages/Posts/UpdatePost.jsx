@@ -1,5 +1,5 @@
 import { doc, updateDoc } from "firebase/firestore";
-import { Button, Form, Spinner } from "react-bootstrap";
+import { Form, Spinner } from "react-bootstrap";
 import { db } from "../../lib/firebase";
 import { useState } from "react";
 import { toast } from "react-toastify";
@@ -82,7 +82,7 @@ const UpdatePost = ({ item, onSubmit }) => {
         {errors.content && (
           <small className="text-danger">{errors.content}</small>
         )}
-        <Button type="submit" className="custom-btn d-block w-100 mx-auto" disabled={isDisabled}>
+        <button type="submit" className="custom-btn d-block w-100 mx-auto" disabled={isDisabled}>
           {loading ? (
             <>
               <Spinner size="sm" animation="border" />
@@ -91,7 +91,7 @@ const UpdatePost = ({ item, onSubmit }) => {
           ) : (
             "Update"
           )}
-        </Button>
+        </button>
       </Form>
     </div>
   );

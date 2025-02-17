@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Form, Spinner } from "react-bootstrap";
+import { Form, Spinner } from "react-bootstrap";
 import SocialMediaComponent from "../components/SocialMedia/SocialMediaComponent";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth, db } from "../lib/firebase";
@@ -99,7 +99,7 @@ const Register = ({ onSubmit, toggleViews }) => {
               placeholder="Username"
               value={userData.username}
               onChange={handleInputChange}
-              className={`${errors.username ? "border-danger" : "border-success"}`}
+              className={`${errors.username && "border-danger"}`}
               required
             />
             {errors.username && (
@@ -114,7 +114,7 @@ const Register = ({ onSubmit, toggleViews }) => {
               placeholder="Email"
               value={userData.email}
               onChange={handleInputChange}
-              className={`${errors.email ? "border-danger" : "border-success"}`}
+              className={`${errors.email && "border-danger"}`}
             />
             {errors.email && (
               <Form.Text className="text-danger">{errors.email}</Form.Text>
@@ -128,14 +128,14 @@ const Register = ({ onSubmit, toggleViews }) => {
               placeholder="Password"
               value={userData.password}
               onChange={handleInputChange}
-              className={`${errors.password ? "border-danger" : "border-success"}`}
+              className={`${errors.password && "border-danger"}`}
             />
             {errors.password && (
               <Form.Text className="text-danger">{errors.password}</Form.Text>
             )}
           </Form.Group>
 
-          <Button type="submit" className="custom-btn d-block w-100 mx-auto" disabled={isDisabled}>
+          <button type="submit" className="custom-btn d-block w-100 mx-auto" disabled={isDisabled}>
             {loading ? (
               <>
                 <Spinner size="sm" animation="border" />
@@ -144,7 +144,7 @@ const Register = ({ onSubmit, toggleViews }) => {
             ) : (
               "Sign up"
             )}
-          </Button>
+          </button>
 
           <div className="d-flex gap-3 align-items-center mt-4">
             <p> Have already an acoount ?</p>{" "}

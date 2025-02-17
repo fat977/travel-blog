@@ -123,6 +123,7 @@ form .form-control {
     position: relative;
     max-width: 500px;
     text-align: center;
+    margin: auto;
 
     &::before {
         @include line-style(left);

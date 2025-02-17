@@ -1,4 +1,4 @@
-import { Button, Col, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import "./home-index.scss";
 
 import Categories from "./categories/Categories";
@@ -60,7 +60,7 @@ const HomeIndex = () => {
                 eum recusandae cum dicta doloremque repellendus tenetur culpa
                 reprehenderit animi, quae dolorem vero.
               </p>
-              <Button className="custom-btn">Explore</Button>
+              <button className="custom-btn">Explore</button>
             </div>
           </Col>
           <Col lg="6" md="12" xs="12">
@@ -86,7 +86,7 @@ const HomeIndex = () => {
         </Row>
       </div>
       <div className="home-categories container my-5">
-        <h3 className="hr-lines mx-auto my-5">Top Categories</h3>
+        <h3 className="hr-lines my-5">Top Categories</h3>
         <Categories />
       </div>
       <div className="home-body container my-5">
@@ -120,7 +120,7 @@ const HomeIndex = () => {
                     />
                   ))
                 ) : (
-                  <p>No posts available</p>
+                  <p className="text-center">No posts available</p>
                 )}
               </Row>
               {destinations.length > 0 && (
@@ -142,7 +142,7 @@ const HomeIndex = () => {
               ) : posts && posts.length > 0 ? (
                 latestPosts.map((post) => (
                   <div
-                    className="d-flex text-wrap gap-3 mb-4"
+                    className="d-flex align-items-center text-wrap gap-3 mb-4"
                     style={{ height: "150px", width: "100%" }}
                     key={post.id}
                   >
@@ -150,6 +150,7 @@ const HomeIndex = () => {
                       src={post.image}
                       alt="latest-post"
                       width={"50%"}
+                      height={'120px'}
                       loading="lazy"
                       style={{ borderRadius: "10px" }}
                     />
@@ -161,13 +162,9 @@ const HomeIndex = () => {
                         overflowWrap: "break-word",
                       }}
                     >
-                      <h4>{post.title}</h4>
+                      <h4>{post.title.slice(0, 30)}</h4>
                       <h5>by {post.userName}</h5>
-                      <p className="mb-0">
-                        {post.content.length > 50
-                          ? post.content.slice(0, 30) + "..."
-                          : post.content}
-                      </p>
+                     
                       <span>
                         <small>
                           {formatDate(post.createdAt.toDate(), "MMMM d, yyyy")}
@@ -177,7 +174,7 @@ const HomeIndex = () => {
                   </div>
                 ))
               ) : (
-                <p>No posts available</p>
+                <p className="text-center">No posts available</p>
               )}
             </div>
             <hr />

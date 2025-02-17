@@ -1,6 +1,6 @@
 import { faCamera } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button, Form, Spinner } from "react-bootstrap";
+import { Form, Spinner } from "react-bootstrap";
 import avatar from "../../../assets/images/profile/avatar.png";
 import "./settings.scss";
 import { useState } from "react";
@@ -74,7 +74,7 @@ const Settings = ({onSubmit}) => {
           onChange={handleInputChange}
           className="mb-3"
         />
-        <Button type="submit" className="custom-btn d-block w-100 mx-auto" disabled={isDisabled}>
+        <button type="submit" className="custom-btn d-block w-100 mx-auto" disabled={isDisabled}>
             {loading ? (
               <>
                 <Spinner size="sm" animation="border" />
@@ -83,7 +83,7 @@ const Settings = ({onSubmit}) => {
             ) : (
               "Update"
             )}
-          </Button>
+          </button>
       </Form>
     </div>
   );

@@ -46,36 +46,19 @@
 
     .testimonials {
         width: 50%;
-
         .swiper {
-
             .swiper-slide {
                 position: relative;
                 padding: 40px;
                 text-align: center;
                 color: $text-color;
-                font-size: 1.2rem;
+                //font-size: 1.2rem;
                 font-weight: bold;
                 border-radius: 10px;
-
-                //width: 500px;
                 .swiper-content {
                     background-color: rgb(250, 247, 247);
                 }
 
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: 8%;
-                    left: 3%;
-                    right: 3%;
-                    bottom: 8%;
-                    border-radius: 10px;
-                    border: 2px solid $secondary-color;
-                    transform: rotate(5deg);
-                    z-index: 1;
-                    pointer-events: none;
-                }
             }
 
             .swiper-button-prev {

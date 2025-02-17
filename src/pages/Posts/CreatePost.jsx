@@ -1,6 +1,6 @@
 import { addDoc, collection } from "firebase/firestore";
 import { useState } from "react";
-import { Button, Form, Spinner } from "react-bootstrap";
+import { Form, Spinner } from "react-bootstrap";
 import { auth, db } from "../../lib/firebase";
 import { toast } from "react-toastify";
 import { validateField } from "../../components/Validation/Validation";
@@ -100,7 +100,7 @@ const CreatePost = ({ onSubmit }) => {
           <small className="text-danger">{errors.content}</small>
         )}
 
-        <Button type="submit" className="custom-btn d-block w-100 mx-auto" disabled={isDisabled}>
+        <button type="submit" className="custom-btn d-block w-100 mx-auto" disabled={isDisabled}>
           {loading ? (
             <>
               <Spinner size="sm" animation="border" />
@@ -109,7 +109,7 @@ const CreatePost = ({ onSubmit }) => {
           ) : (
             "Create"
           )}
-        </Button>
+        </button>
       </Form>
     </div>
   );

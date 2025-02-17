@@ -1,4 +1,4 @@
-import { Button, Col, Form, Row } from "react-bootstrap";
+import { Col, Form, Row } from "react-bootstrap";
 import MyMap from "./Map/Map";
 import "./contact.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,7 +8,7 @@ import {
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import bodyImage from '../../assets/images/contact/contact-body.jpg'
+import bodyImage from '../../assets/images/contact/contact-body.png'
 const Contact = () => {
   return (
     <div className="contact">
@@ -57,7 +57,7 @@ const Contact = () => {
                   rows={5}
                 />
               </Form.Group>
-              <Button className="my-3 d-block w-100 custom-btn">Send Message</Button>
+              <button className="my-3 d-block w-100 custom-btn">Send Message</button>
             </Form>
           </Col>
         </Row>

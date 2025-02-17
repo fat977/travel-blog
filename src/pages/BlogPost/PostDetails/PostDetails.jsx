@@ -1,4 +1,4 @@
-import { Button, Col, Form, Row } from "react-bootstrap";
+import {Col, Form, Row } from "react-bootstrap";
 import "./post-details.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-regular-svg-icons/faHeart";
@@ -19,6 +19,8 @@ import userImg from "../../../assets/images/user/default-user.jpg";
 const PostDetails = () => {
   const { id } = useParams();
   const [post, setPost] = useState([]);
+  const [formattedDate, setFormattedDate] = useState('');
+
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
@@ -70,6 +72,17 @@ const PostDetails = () => {
     fetchData();
   }, [id]);
 
+  useEffect(() => {
+    // Only attempt to format the date when the post data is loaded
+    if (post && post.timestamp) {
+      const timestamp = new Date(post.timestamp);
+      if (!isNaN(timestamp.getTime())) {
+        setFormattedDate(formatDate(timestamp, "EEEE, h:mm a"));
+      } else {
+        setFormattedDate('Invalid date');
+      }
+    }
+  }, [post]); // Re-run this effect when post data changes
   return (
     <>
       {isLoading ? (
@@ -84,25 +97,25 @@ const PostDetails = () => {
         <div className="post-details">
           <div className="post-header">
             <img src={post.image} alt="post-img" loading="lazy" />
-            <div className="header-text-details w-75">
+            <div className="header-text-details">
               <h2>{post.title}</h2>
-              <div className="d-flex gap-3  justify-content-lg-start ">
+              <div className="info d-flex gap-3">
                 <div>
                   <FontAwesomeIcon icon={faUser} /> {post.author}
                 </div>
                 <div>
                   <FontAwesomeIcon icon={faCalendarDays} />{" "}
-                  {formatDate(post.timestamp, "MMMM d, yyyy")}
+                  {formattedDate &&formatDate(post.timestamp, "MMMM d, yyyy")}
                 </div>
                 <div>
                   <FontAwesomeIcon icon={faClock} />{" "}
-                  {formatDate(post.timestamp, "EEEE,h:mm a")}
+                  {formattedDate &&formatDate(post.timestamp, "EEEE,h:mm a")}
                 </div>
               </div>
             </div>
           </div>
           <div className="post-body my-5 container">
-            <Row className="g-5">
+            <Row className="">
               <Col lg="9" md="12" xs="12">
                 <div className="post-content my-5">
                   <p>{post.content}</p>
@@ -139,7 +152,7 @@ const PostDetails = () => {
                             <h4>{comment.author}</h4>
                             <span><FontAwesomeIcon icon={faCalendarDays} />  April 9, 2021 at 10:28 am</span>
                             <p>{comment.text}</p>
-                            <Button className="custom-btn">Reply</Button>
+                            <button className="custom-btn">Reply</button>
                           </div>
                         </div>
                         <div className="admin-comment  py-3 d-flex gap-3 ms-5">
@@ -155,7 +168,7 @@ const PostDetails = () => {
                               Lorem ipsum, dolor sit amet consectetur
                               adipisicing elit.
                             </p>
-                            <Button className="custom-btn">Reply</Button>
+                            <button className="custom-btn">Reply</button>
                           </div>
                         </div>
                       </div>
@@ -180,7 +193,7 @@ const PostDetails = () => {
                       rows={5}
                       className="mb-3"
                     />
-                    <Button className="custom-btn">Post Comment</Button>
+                    <button className="custom-btn">Post Comment</button>
                   </Form>
                 </div>
               </Col>

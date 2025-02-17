@@ -113,7 +113,7 @@ const NavBar = () => {
             </Navbar.Brand>
             <Navbar.Toggle
               aria-controls="responsive-navbar-nav"
-              className="order-3 ms-3"
+              className="order-3 ms-3 bg-light"
             />
             <Navbar.Collapse
               id="responsive-navbar-nav"

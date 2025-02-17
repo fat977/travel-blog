@@ -11,6 +11,10 @@
     }
 
     .navbar-toggler {
+        //background-color: #38A6B0  !important;
+        padding: 0.3rem;
+        border-radius: 50%;
+
         &:focus {
             box-shadow: 5px 5px 0 $primary-color !important;
             border: none !important;
@@ -86,7 +90,7 @@
     .navbar-brand {
         width: 40%;
         img {
-            width: 15%;
+            width: 20%;
             height: 15%;
         }
     }

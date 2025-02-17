@@ -69,7 +69,6 @@ const Profile = () => {
 
   //filter posts
   const userPosts = posts.filter((post) => user.displayName === post.userName);
-
   return (
     <div className="profile container my-5 ">
       <Row className="">
@@ -235,7 +234,7 @@ const Profile = () => {
               />
             ))
           ) : (
-            "No posts available"
+            <p className="text-center">No posts available</p>
           )}
         </Row>
       </div>
