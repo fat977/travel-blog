@@ -47,7 +47,7 @@ console.log(id)
             <img src={destination.image} alt="destination-img" loading="lazy" />
           </div>
           <div className="destination-body my-5 container">
-            <Row className="g-5">
+            <Row className="">
               <Col lg="9" md="12" xs="12">
                 <div className="destination-content my-5">
                 <h3>{destination.name}</h3>

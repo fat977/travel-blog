@@ -59,14 +59,14 @@
 @media (max-width:'992px'){
     div.header-img{
         display: flex;
-        justify-content: center !important;
+        justify-content: start !important;
         margin: 20px 0;
         :first-child{
             width: 100%;
             border-radius: 50px !important;
         }
         :last-child{
-            //left: 65% !important;
+            left: 55% !important;
             border-radius: 50% !important;
             width: 150px;
             height: 150px;
